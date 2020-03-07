@@ -1,6 +1,6 @@
 <div class="cal-hardware">
     <div class="cal-display"></div>
-    <div class="main-pad-sec" *ngFor="let pad of pad_names">
-        {{pad}}
+    <div class="main-pad-sec" *ngFor="let pad of pad_names" >
+        <app-buttons [data]="pad"></app-buttons>
     </div>
 </div>
