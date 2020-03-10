@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  pad_names=['0','1','2','3','4','5','6','7','8','9'];
+  pad_names=['7','8','9','X'];
+  pad_names1=['4','5','6','-'];
+  pad_names2=['1','2','3','+'];
 }

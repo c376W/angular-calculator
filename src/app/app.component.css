@@ -1,0 +1,39 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+.cal-hardware{
+    margin:20px auto;
+    display: flex;
+    justify-content: center;
+}
+.cal-display{
+    width:400px;
+    height:100px;
+    background-color: #000;
+}
+.main-pad-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+.main-pad-row{
+    display: flex;
+    flex-direction: row;
+}
+.main-el{
+    width:100px;
+    height:100px;
+    background-color:#000;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#zero{
+    width:300px;
+}
+#AC{
+    width:200px;
+}

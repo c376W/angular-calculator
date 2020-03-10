@@ -1,6 +1,24 @@
-<div class="cal-hardware">
-    <div class="cal-display"></div>
-    <div class="main-pad-sec" *ngFor="let pad of pad_names" >
-        <app-buttons [data]="pad"></app-buttons>
+<div class="cal-hardware"> 
+    <div class="main-pad-sec"  >
+        <div class="cal-display"></div>
+        <div class="main-pad-row">
+            <div class="main-el" id="AC">AC</div>
+            <div class="main-el">C</div>
+            <div class="main-el">/</div>
+        </div>
+        <div class="main-pad-row">
+            <app-buttons [data]="pad" *ngFor="let pad of pad_names"></app-buttons>
+        </div>
+        <div class="main-pad-row">
+            <app-buttons [data]="pad" *ngFor="let pad of pad_names1"></app-buttons>
+        </div>
+        <div class="main-pad-row">
+            <app-buttons [data]="pad" *ngFor="let pad of pad_names2"></app-buttons>
+        </div>
+        <div class="main-pad-row">
+            <div class="main-el" id="zero">0</div>
+            <div class="main-el">=</div>
+        </div>
+        
     </div>
 </div>

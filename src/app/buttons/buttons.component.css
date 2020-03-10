@@ -7,7 +7,6 @@
     justify-content: center;
     align-items: center;
 }
-/* test */
-/* test1 */
-/* test2 */
-/* test3 */
+.btn:hover{
+    cursor: pointer;
+}
