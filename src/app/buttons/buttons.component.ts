@@ -8,11 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ButtonsComponent implements OnInit {
   @Input() data;
   pad_display="";
+
   constructor() { }
   
   ngOnInit() {
     this.pad_display=this.data;
     console.log(this.data);
   }
+  
 
 }

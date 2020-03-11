@@ -1,23 +1,26 @@
 <div class="cal-hardware"> 
     <div class="main-pad-sec"  >
-        <div class="cal-display"></div>
+        <div class="cal-display">{{display}}</div>
         <div class="main-pad-row">
             <div class="main-el" id="AC">AC</div>
             <div class="main-el">C</div>
             <div class="main-el">/</div>
         </div>
         <div class="main-pad-row">
-            <app-buttons [data]="pad" *ngFor="let pad of pad_names"></app-buttons>
+            <app-buttons [data]="pad" *ngFor="let pad of pad_names" 
+            (click)="inputNum(pad)"></app-buttons>
         </div>
         <div class="main-pad-row">
-            <app-buttons [data]="pad" *ngFor="let pad of pad_names1"></app-buttons>
+            <app-buttons [data]="pad" *ngFor="let pad of pad_names1"
+            (click)="inputNum(pad)"></app-buttons>
         </div>
         <div class="main-pad-row">
-            <app-buttons [data]="pad" *ngFor="let pad of pad_names2"></app-buttons>
+            <app-buttons [data]="pad" *ngFor="let pad of pad_names2"
+            (click)="inputNum(pad)"></app-buttons>
         </div>
         <div class="main-pad-row">
-            <div class="main-el" id="zero">0</div>
-            <div class="main-el">=</div>
+            <div class="main-el" id="zero" (click)="inputNum(0)">0</div>
+            <div class="main-el" id="equal" (click)="calRes()">=</div>
         </div>
         
     </div>

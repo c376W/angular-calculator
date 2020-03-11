@@ -10,6 +10,12 @@
     width:400px;
     height:100px;
     background-color: #000;
+    color:#fff;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right:50px;
 }
 .main-pad-sec{
     display: flex;
@@ -33,7 +39,12 @@
 
 #zero{
     width:300px;
+    cursor: pointer;
 }
 #AC{
     width:200px;
+}
+
+#equal{
+    cursor: pointer;
 }
