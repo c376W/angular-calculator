@@ -45,6 +45,6 @@
     width:200px;
 }
 
-#equal{
+#equal,.pointer{
     cursor: pointer;
 }

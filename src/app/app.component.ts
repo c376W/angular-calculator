@@ -33,8 +33,23 @@ export class AppComponent {
     // Just in case the last entered number is an operator
     if(this.operators.indexOf(this.display.charAt(this.display.length-1))>=0){
       this.display=this.display.substr(0,this.display.length-1);
+      this.entered_num="";
     }
     this.res=String(eval(this.display));
     this.display=this.res;
+    this.entered_num=this.display;
+  }
+
+  clearLast(){
+    if(this.entered_num.length===1) this.display="0";
+    else{
+      this.entered_num=this.entered_num.substr(0,this.entered_num.length-1);
+      this.display=this.entered_num;
+    }
+  }
+  clearAll(){
+    this.display="0";
+    this.entered_num="";
+
   }
 }

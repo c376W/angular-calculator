@@ -2,9 +2,9 @@
     <div class="main-pad-sec"  >
         <div class="cal-display">{{display}}</div>
         <div class="main-pad-row">
-            <div class="main-el" id="AC">AC</div>
-            <div class="main-el">C</div>
-            <div class="main-el">/</div>
+            <div class="main-el pointer" id="AC" (click)="clearAll()">AC</div>
+            <div class="main-el pointer" (click)="clearLast()">C</div>
+            <div class="main-el pointer" (click)="inputNum('/')">/</div>
         </div>
         <div class="main-pad-row">
             <app-buttons [data]="pad" *ngFor="let pad of pad_names" 
