@@ -62,5 +62,14 @@ export class AppComponent {
     this.entered_num="";
 
   }
+  changeSign(){
+    if(this.operators.indexOf(this.entered_num[0])<0){
+      this.entered_num="-"+this.entered_num;
+      this.display=this.entered_num;
+    }else{
+      this.entered_num=this.entered_num.substr(1);
+      this.display=this.entered_num;
+    }
+  }
 }
 
