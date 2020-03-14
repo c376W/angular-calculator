@@ -11,31 +11,40 @@ export class AppComponent {
   pad_names2=['1','2','3','+'];
   display="0";
   entered_num="";
-  operators=['+','-','*','/'];
+  operators=['+','-','*','/','='];
   res="";
 
   inputNum(num){
-    if(this.display.length<8){
-      // When the first input is an operator
-      if(this.display.length===0 && this.operators.indexOf(num)>=0){
-        this.display="0";
-      }else if(this.operators.indexOf(num)>=0
-      && this.operators.indexOf(this.display.charAt(this.display.length-1))>=0){}      
-      else{
-        this.entered_num+=String(num);
-        this.display=this.entered_num;
-      }
-        
+    if(this.display.length===8 && this.operators.indexOf(num)<0) return; 
+    
+    // When the first input is an operator
+    if(this.entered_num.length===0 && this.operators.indexOf(num)>=0){
+      this.display="0";
+    }else if(this.operators.indexOf(num)>=0
+    && this.operators.indexOf(this.display.charAt(this.display.length-1))>=0){}
+    else if(this.operators.indexOf(num)>=0){
+      this.display=String(num);
+      this.entered_num+=String(num);
+    }      
+    else{
+      if(this.operators.indexOf(this.display)>=0 || this.display==="0") this.display="";
+      this.entered_num+=String(num);
+      this.display+=String(num);
     }
       
   }
   calRes(){
     // Just in case the last entered number is an operator
-    if(this.operators.indexOf(this.display.charAt(this.display.length-1))>=0){
-      this.display=this.display.substr(0,this.display.length-1);
+    if(this.operators.indexOf(this.entered_num.charAt(this.entered_num.length-1))>=0){
+      this.entered_num=this.entered_num.substr(0,this.entered_num.length-1);
       this.entered_num="";
     }
-    this.res=String(eval(this.display));
+    this.res=String(eval(this.entered_num));
+    if(this.res.length>8) {
+      this.display="ERR";
+      this.entered_num="";
+      return;
+    }
     this.display=this.res;
     this.entered_num=this.display;
   }
