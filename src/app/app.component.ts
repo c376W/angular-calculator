@@ -9,6 +9,7 @@ export class AppComponent {
   pad_names=['7','8','9','*'];
   pad_names1=['4','5','6','-'];
   pad_names2=['1','2','3','+'];
+  pad_names3=['+/-','0','.','='];
   display="0";
   entered_num="";
   operators=['+','-','*','/','='];
