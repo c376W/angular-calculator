@@ -41,20 +41,24 @@ export class AppComponent {
       this.entered_num="";
     }
     this.res=String(eval(this.entered_num));
-    if(this.res.length>8) {
-      this.display="ERR";
-      this.entered_num="";
-      return;
-    }
+    // if(this.res.length>16) {
+    //   this.display="ERR";
+    //   this.entered_num="";
+    //   return;
+    // }
     this.display=this.res;
     this.entered_num=this.display;
   }
 
   clearLast(){
     if(this.entered_num.length===1) this.display="0";
+    
     else{
-      this.entered_num=this.entered_num.substr(0,this.entered_num.length-1);
-      this.display=this.entered_num;
+      if(this.entered_num===''){}
+      else{
+        this.entered_num=this.entered_num.substr(0,this.entered_num.length-1);
+        this.display=this.entered_num;
+      }
     }
   }
   clearAll(){
